@@ -1,0 +1,25 @@
+﻿<Window x:Class="KMA.ProgrammingInCSharp2023.Lab4UserDatabase.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels1="clr-namespace:KMA.ProgrammingInCSharp2023.Lab4UserDatabase.ViewModels"
+        xmlns:views1="clr-namespace:KMA.ProgrammingInCSharp2023.Lab4UserDatabase.Views"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+       Title="Person Data App" Height="480" Width="800">
+    <Window.Resources>
+        <DataTemplate DataType="{ x:Type viewModels1:MainViewModel}">
+            <views1:MainView></views1:MainView>
+        </DataTemplate>
+        <DataTemplate DataType="{ x:Type viewModels1:AddPersonViewModel}">
+            <views1:AddPersonView></views1:AddPersonView>
+        </DataTemplate>
+        <DataTemplate DataType="{ x:Type viewModels1:EditPersonViewModel}">
+            <views1:EditPersonView></views1:EditPersonView>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <ContentControl Content="{Binding CurrentViewModel, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding IsEnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></ContentControl>
+    </Grid>
+</Window>

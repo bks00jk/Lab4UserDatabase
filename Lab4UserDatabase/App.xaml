@@ -1,0 +1,9 @@
+﻿<Application x:Class="Lab4UserDatabase.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:KMA.ProgrammingInCSharp2023.Lab4UserDatabase"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
